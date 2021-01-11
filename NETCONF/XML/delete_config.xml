@@ -1,0 +1,9 @@
+<!-- Identifies and deletes a Loopback interface -->
+
+<config>
+    <interfaces xmlns="urn:ietf:params:xml:ns:yang:ietf-interfaces">
+        <interface operation="delete">
+            <name>{INTERFACE}</name>
+        </interface>
+    </interfaces>
+</config>
