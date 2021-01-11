@@ -14,6 +14,8 @@ def get_schema():
     F.write(YANG_TREE)
     F.close()
 
+    devnet_connection.close_session()
+
 if __name__=="__main__":
     get_schema()
 
