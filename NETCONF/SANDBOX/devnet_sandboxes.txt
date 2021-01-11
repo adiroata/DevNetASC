@@ -1,4 +1,4 @@
-# Always ON Sandboxes
+# Always-ON DevNet Sandboxes
 
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
