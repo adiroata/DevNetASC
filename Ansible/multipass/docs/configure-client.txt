@@ -1,15 +1,15 @@
 # Check if user has a password set. If not (!), set the password.
-$ cat /etc/passwd
+    $ cat /etc/passwd
 
 # Set user password.
-$ sudo passwd <username>
+    $ sudo passwd <username>
 
 # Edit
-$ sudo nano /etc/ssh/sshd_config
+    $ sudo nano /etc/ssh/sshd_config
  
-PasswordAuthentication no 
-to 
-PasswordAuthentication yes
+    PasswordAuthentication no 
+    to 
+    PasswordAuthentication yes
 
 # Restart the SSH service
-$ sudo service ssh restart
+    $ sudo service ssh restart
