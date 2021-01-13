@@ -1,0 +1,55 @@
+# Create entries for the remote hosts
+    $ sudo nano /etc/hosts
+
+# Create SSH key
+    $ ssh-keygen
+
+# accept the defaults
+#list the keys to verify
+    $ ls .ssh
+
+# copy the key to other machines (without quotes)
+    $ ssh-copy-id -i .ssh/id_rsa.pub "hostname"
+
+# Test pubkey auth
+    $ ssh <hostname>
+
+# Configure sudo so that it doesnt require a password, on all VMs
+    $ sudo visudo
+
+# At bottom of file add this line (without quotes):
+    "username" ALL=(ALL) NOPASSWD: ALL
+
+#Save and exit
+
+
+
+########## Create Ansible INVENTORY ##########
+    $ sudo nano /etc/ansible/hosts
+
+#   [hosts]
+#   VM1 hostname
+#   VM2 hostname
+
+## can also specify username to use like
+# ubuntu1 ansible_user=administrator
+
+# Tests
+    $ ansible -m ping all
+
+# Raw module with the uptime action (-a)
+    $ ansible -m raw -a '/usr/bin/uptime' linuxhosts
+    $ ansible -m shell -a 'python3 -V' linuxhosts
+    $ ansible all -a 'whoami'
+
+# Elevate to root with -b for become. Why? Because ansible doesnt elevate to sudo by default
+    $ ansible all -b -a 'whoami'
+
+# Note not specifying a module like above it defaults to command module
+
+
+
+########## NETWORKING ##########
+# Set environment variables for auth to devices
+# cd to the directory
+# source .ansible_env

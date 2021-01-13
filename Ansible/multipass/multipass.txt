@@ -1,0 +1,29 @@
+# Documentation
+# https://multipass.run/docs
+
+# Host specs
+OS: Ubuntu 20.04 LTS 
+VM: 
+    CPU: 4 Cores
+    RAM: 8 GB RAM 
+    SSD: 40 GB SSD
+Hypervisor: Worstation 16
+
+# Install 
+    $ sudo snap install multipass
+
+# Create environment
+    $ multipass launch server
+    $ multipass launch client1
+    $ multipass launch client2
+
+# View instances
+    $ multipass list
+
+# Connect to instances
+    $ multipass shell server
+    $ multipass shell client1
+    $ multipass shell client2
+
+# Get help
+    $ multipass help <>/<command>
