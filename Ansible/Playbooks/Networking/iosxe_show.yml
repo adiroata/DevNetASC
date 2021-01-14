@@ -1,0 +1,20 @@
+---
+- name: Issue show commands
+  hosts: gns
+  connection: local
+  tasks:
+    - name: Show ip int brief
+      ios_command:
+        commands:
+          - show ip int brief
+        provider:
+          host: 10.10.10.1
+          port: 22
+          authorize: yes      
+          username: admin
+          password: cisco
+      register: if_data
+
+    - name: Interfaces output
+      debug:
+        var: if_data['stdout_lines'][0]

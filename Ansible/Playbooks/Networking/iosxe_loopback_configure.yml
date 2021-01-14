@@ -1,0 +1,33 @@
+---
+- name: Create a loopback
+  hosts: gns
+  connection: local
+
+  tasks:
+    - name: Create interface shell
+      with_items: "{{loopback_if}}"
+      ios_interface:
+        provider:
+          host: 10.10.10.1
+          port: 22
+          authorize: yes      
+          username: admin
+          password: cisco
+        name: "{{item.name}}"
+        description: "{{item.desc}}"
+
+
+    - name: Configure interface
+      with_items: "{{loopback_if}}"
+      ios_l3_interface:
+        name: "{{item.name}}"
+        ipv4: "{{item.ip_address}}"
+        provider:
+          host: 10.10.10.1
+          port: 22
+          authorize: yes      
+          username: admin
+          password: cisco
+
+
+    

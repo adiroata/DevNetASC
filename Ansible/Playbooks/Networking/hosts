@@ -1,0 +1,15 @@
+[gns]
+10.10.10.1
+10.10.10.2
+10.10.10.3
+
+[gns:vars]
+ansible_user=admin
+ansible_ssh_pass=cisco
+
+[devnet]
+ios-xe-mgmt.cisco.com
+
+[all:children]
+devnet
+gns
