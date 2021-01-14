@@ -1,0 +1,8 @@
+---
+- name: Get kernel releases from clients and set timestamp
+  hosts: clients
+  tasks:
+    - name: get kernel releases and write to local file
+      shell: uname -r > /home/ubuntu/output.txt
+    - name: set timestamp
+      shell: date "+%H:%M" >> /home/ubuntu/output.txt

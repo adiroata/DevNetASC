@@ -1,0 +1,9 @@
+---
+- name: Playbook with variables
+  hosts: clients
+  vars:
+    - var1: fire
+    - var2: ice
+  tasks:
+    - name: Write data to file
+      shell: echo "{{var1}} melts {{var2}}" > /home/ubuntu/message.txt

@@ -1,0 +1,13 @@
+---
+- name: Loops playbook
+  hosts: clients
+  become: yes
+  tasks:
+    - name: Create a file
+      shell: echo "Begin file" > /home/ubuntu/loops.txt
+    - name: Install packages
+      shell: echo "{{item}}" >> /home/ubuntu/loops.txt
+      with_items:
+        - vim
+        - nano
+        - python

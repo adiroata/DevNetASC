@@ -1,0 +1,21 @@
+---
+- name: Condition playbook
+  hosts: clients
+  become: yes
+  tasks:
+    - name: run script1.sh
+      # make a bash script on client1 VM named script1.sh
+      # the script should: echo "Hello client1!" > /home/ubuntu/somesile.txt
+      # make it executable: chmod +x script1.sh
+      shell: ./script1.sh
+      # This will generate an error on client2 VM
+      ignore_errors: yes
+      # Store the error output in a variable
+      register: result
+    - name: run script2.sh
+      # on client2 VM make a script named script2.sh
+      # the script should: echo "Hello client2!" > /home/ubuntu/somefile.txt
+      # make it executable
+      shell: ./script2.sh
+      # The script will run for client2 VM 
+      when: result is failed
