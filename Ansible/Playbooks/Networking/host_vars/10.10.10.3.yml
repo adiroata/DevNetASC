@@ -4,9 +4,21 @@ loopback_if:
   - name: loopback1337
     desc: Configured with Ansible 
     ip_address: 192.168.163.167/32
+    host: 10.10.10.3
+    port: 22
+    user: admin
+    pass: cisco
   - name: loopback1338
     desc: Configured with Ansible 
     ip_address: 192.168.163.168/32
+    host: 10.10.10.3
+    port: 22
+    user: admin
+    pass: cisco
   - name: loopback1339
     desc: Configured with Ansible 
     ip_address: 192.168.163.169/32
+    host: 10.10.10.3
+    port: 22
+    user: admin
+    pass: cisco

@@ -1,6 +1,6 @@
 ---
 - name: Create a loopback
-  hosts: gns
+  hosts: group
   connection: local
   tasks:
     - name: Delete interface
@@ -10,8 +10,8 @@
           - configure terminal
           - "no interface {{item.name}}"
         provider:
-          host: 10.10.10.1
-          port: 22
-          authorize: yes
-          username: admin
-          password: cisco
+          host: "{{item.host}}"
+          port: "{{item.port}}"
+          authorize: yes      
+          username: "{{item.user}}"
+          password: "{{item.pass}}"

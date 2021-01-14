@@ -3,10 +3,22 @@
 loopback_if:
   - name: loopback1337
     desc: Configured with Ansible 
-    ip_address: 192.168.169.167/32
+    ip_address: 192.168.161.167/32
+    host: ios-xe-mgmt.cisco.com
+    port: 8181
+    user: developer
+    pass: C1sco12345
   - name: loopback1338
     desc: Configured with Ansible 
-    ip_address: 192.168.169.168/32
+    ip_address: 192.168.161.168/32
+    host: ios-xe-mgmt.cisco.com
+    port: 8181
+    user: developer
+    pass: C1sco12345
   - name: loopback1339
     desc: Configured with Ansible 
-    ip_address: 192.168.169.169/32
+    ip_address: 192.168.161.169/32
+    host: ios-xe-mgmt.cisco.com
+    port: 8181
+    user: developer
+    pass: C1sco12345

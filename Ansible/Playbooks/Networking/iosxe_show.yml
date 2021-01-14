@@ -1,6 +1,6 @@
 ---
 - name: Issue show commands
-  hosts: gns
+  hosts: devnet
   connection: local
   tasks:
     - name: Show ip int brief
@@ -8,11 +8,11 @@
         commands:
           - show ip int brief
         provider:
-          host: 10.10.10.1
-          port: 22
+          host: ios-xe-mgmt.cisco.com
+          port: 8181
           authorize: yes      
-          username: admin
-          password: cisco
+          username: developer
+          password: C1sco12345
       register: if_data
 
     - name: Interfaces output
