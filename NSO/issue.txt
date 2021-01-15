@@ -1,0 +1,29 @@
+# Issue when syncing config.
+result false
+info Failed to connect to device nexus1: connection refused: Key exchange was not finished, connection is closed.
+
+# Solution
+https://community.cisco.com/t5/nso-developer-hub-discussions/nso-datacenter-example-connection-refused-error/td-p/3806178
+
+1) Generate a NEW SSH key
+    $ ssh-keygen -t rsa -m PEM -f ${NCS_DIR}/etc/ncs/ssh/ssh_host_rsa_key -N ''
+
+2) From $NCS_RUN (or where your ./netsim directory was created)
+    $ cd ncs-run
+    $ find netsim/ -type d -name ssh -exec cp ${NCS_DIR}/etc/ncs/ssh/ssh_host_rsa_key* {} \;
+
+3) manually ensure the SSH Keys from ${NCS_DIR}/etc/ncs/ssh/ were successfully copied to EACH netsim (device) ‘ssh’ directory
+
+4) Once copy is complete and verified
+
+a. Login to NSO
+b. Perform a ‘fetch-host-keys’ command for each device
+
+switch cli
+devices device <devicename> ssh fetch-host-keys
+
+devices sync-from
+
+# expected to ‘sync’ all devices
+
+5) If fails, see Step #3

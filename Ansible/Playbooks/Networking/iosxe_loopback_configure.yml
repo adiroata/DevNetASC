@@ -1,6 +1,6 @@
 ---
 - name: Create a loopback
-  hosts: group
+  hosts: gns
   connection: local
 
   tasks:
