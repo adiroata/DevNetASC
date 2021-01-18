@@ -1,0 +1,11 @@
+# Get snapshot 1
+pyats parse "show interfaces description" --testbed-file testbed.yml --devices R1 --output demo11
+
+# Get snapshot 2
+pyats parse "show interfaces description" --testbed-file testbed.yml --devices R1 --output demo12
+
+# Compare the snapshots
+pyats diff demo1 demo2
+
+# View the diffs
+cat <diff_file>

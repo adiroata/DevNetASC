@@ -1,0 +1,140 @@
+{
+  "_exclude": [],
+  "interfaces": {
+    "Ethernet0/0": {
+      "description": "",
+      "protocol": "up",
+      "status": "up"
+    },
+    "Ethernet0/0.10": {
+      "description": "management",
+      "protocol": "up",
+      "status": "up"
+    },
+    "Ethernet0/1": {
+      "description": "",
+      "protocol": "down",
+      "status": "admin down"
+    },
+    "Ethernet0/2": {
+      "description": "",
+      "protocol": "down",
+      "status": "admin down"
+    },
+    "Ethernet0/3": {
+      "description": "",
+      "protocol": "down",
+      "status": "admin down"
+    },
+    "Ethernet1/0": {
+      "description": "",
+      "protocol": "down",
+      "status": "admin down"
+    },
+    "Ethernet1/1": {
+      "description": "",
+      "protocol": "down",
+      "status": "admin down"
+    },
+    "Ethernet1/2": {
+      "description": "",
+      "protocol": "down",
+      "status": "admin down"
+    },
+    "Ethernet1/3": {
+      "description": "",
+      "protocol": "down",
+      "status": "admin down"
+    },
+    "Ethernet2/0": {
+      "description": "",
+      "protocol": "down",
+      "status": "admin down"
+    },
+    "Ethernet2/1": {
+      "description": "",
+      "protocol": "down",
+      "status": "admin down"
+    },
+    "Ethernet2/2": {
+      "description": "",
+      "protocol": "down",
+      "status": "admin down"
+    },
+    "Ethernet2/3": {
+      "description": "",
+      "protocol": "down",
+      "status": "admin down"
+    },
+    "Ethernet3/0": {
+      "description": "",
+      "protocol": "down",
+      "status": "admin down"
+    },
+    "Ethernet3/1": {
+      "description": "",
+      "protocol": "down",
+      "status": "admin down"
+    },
+    "Ethernet3/2": {
+      "description": "",
+      "protocol": "down",
+      "status": "admin down"
+    },
+    "Ethernet3/3": {
+      "description": "",
+      "protocol": "down",
+      "status": "admin down"
+    },
+    "Loopback0": {
+      "description": "management",
+      "protocol": "up",
+      "status": "up"
+    },
+    "Loopback1339": {
+      "description": "Configured with Ansible",
+      "protocol": "up",
+      "status": "up"
+    },
+    "Serial4/0": {
+      "description": "",
+      "protocol": "down",
+      "status": "admin down"
+    },
+    "Serial4/1": {
+      "description": "",
+      "protocol": "down",
+      "status": "admin down"
+    },
+    "Serial4/2": {
+      "description": "",
+      "protocol": "down",
+      "status": "admin down"
+    },
+    "Serial4/3": {
+      "description": "",
+      "protocol": "down",
+      "status": "admin down"
+    },
+    "Serial5/0": {
+      "description": "",
+      "protocol": "down",
+      "status": "admin down"
+    },
+    "Serial5/1": {
+      "description": "",
+      "protocol": "down",
+      "status": "admin down"
+    },
+    "Serial5/2": {
+      "description": "",
+      "protocol": "down",
+      "status": "admin down"
+    },
+    "Serial5/3": {
+      "description": "",
+      "protocol": "down",
+      "status": "admin down"
+    }
+  }
+}

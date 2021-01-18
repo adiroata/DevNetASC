@@ -1,0 +1,7 @@
+--- demo1/R1_show-interfaces-description_parsed.txt
++++ demo2/R1_show-interfaces-description_parsed.txt
+ interfaces:
++ Loopback1337: 
++  description: new interface added
++  protocol: up
++  status: up
