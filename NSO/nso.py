@@ -23,5 +23,4 @@ if get_resp.status_code != 200:
 devices = get_resp.json()["collection"]["tailf-ncs:device"]
 
 for device in devices:
-    output = json.dumps(device, indent=2)
-    print(output)
+    print(json.dumps(device, indent=2, sort_keys=True))
