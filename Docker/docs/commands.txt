@@ -1,0 +1,30 @@
+# Build the Docker image
+# In the folder containing the "Dockerfile" run:
+sudo docker build -t mydockerimage:latest .
+
+
+# View the new image in the local repository
+docker image ls
+
+
+# Inspect the image
+docker image inspect mydockerimage
+
+
+# View creation history
+docker image history mydockerimage
+
+
+# Run the image in the Docker container
+docker container run -p 5000:5000 -d mydockerimage
+docker container run -p 5001:5000 -d mydockerimage
+docker container run -p 5002:5000 -d mydockerimage
+docker container run -p 5003:5000 -d mydockerimage
+
+
+# Stop the container
+docker container stop mydockerimage
+
+
+# Remove the image
+docker image rm mydockerimage
