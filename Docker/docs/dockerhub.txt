@@ -6,3 +6,6 @@ docker tag <image id> <username>/<repo>:latest
 
 # Push image to dockerhub
 sudo docker push <username>/<repo>
+
+# Pull image from dockerhub
+docker image pull <username>/<repo>:latest
