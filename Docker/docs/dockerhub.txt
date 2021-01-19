@@ -1,0 +1,8 @@
+# login to dockerhub
+sudo docker login --username=<username>
+
+# Impose dockerhub tag
+docker tag <image id> <username>/<repo>:latest
+
+# Push image to dockerhub
+sudo docker push <username>/<repo>
