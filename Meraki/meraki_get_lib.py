@@ -2,6 +2,7 @@ import meraki
 import json
 
 # export the meraki API key as environment variable
+# export MERAKI_DASHBOARD_API_KEY=
 
 dashboard = meraki.DashboardAPI()
 
