@@ -10,8 +10,9 @@ def delete_device_config():
         # Input items into template
         config_delete = config_template.format(INTERFACE=loopback)
         # Edit configuration
-        device_reply = devnet_connection.edit_config(target="running", config=config_delete)
+        devnet_connection.edit_config(target="running", config=config_delete)
         print("\n*** The interface {} was deleted ***".format(loopback))
+        #print(device_reply)
 
     devnet_connection.close_session()
 

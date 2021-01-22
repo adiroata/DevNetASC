@@ -9,8 +9,9 @@ def edit_device_config():
     for loopback in loopbacks:
         # Input items into template
         config_new = config_template.format(INTERFACE=loopback, DESCRIPTION="DevNet test interface")
-        device_reply = devnet_connection.edit_config(target="running", config=config_new)
+        devnet_connection.edit_config(target="running", config=config_new)
         print("\n*** The interface {} has been configured ***".format(loopback))
+        #print(device_reply)
 
     devnet_connection.close_session()
 
