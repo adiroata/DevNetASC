@@ -1,0 +1,9 @@
+# Activate ERS Rest API
+Administration > System > Settings > ERS Settings
+
+# Documentation
+https://developer.cisco.com/docs/identity-services-engine/3.0/#!setting-up
+
+
+# OR
+https://<ISE IP Address>:9060/ers/sdk#scheme
