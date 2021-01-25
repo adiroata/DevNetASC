@@ -1,0 +1,5 @@
+# Documentation
+https://docs.umbrella.com/umbrella-guides/page/developer-guides
+
+# Methods list
+https://docs.umbrella.com/umbrella-api/reference
