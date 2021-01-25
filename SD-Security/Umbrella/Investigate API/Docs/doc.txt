@@ -1,0 +1,8 @@
+# Create token
+https://investigate.umbrella.com/tokens-view
+
+# API Documentation
+https://docs.umbrella.com/investigate-api/docs
+
+# Domain status and Categorization
+https://docs.umbrella.com/investigate-api/docs/domain-status-and-categorization-1
