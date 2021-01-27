@@ -37,4 +37,4 @@ response = requests.request("POST", url,
     auth=(switchuser,switchpassword),
     verify=False).json()
 
-print("+++++   VLANs were deleted.   +++++")
+print("+++++   VLAN(s) were deleted.   +++++")
