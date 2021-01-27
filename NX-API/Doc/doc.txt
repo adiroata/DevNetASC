@@ -1,0 +1,7 @@
+# Enable NX-API
+
+# NX-API CLI
+conf t
+feature nxapi
+
+copy run start
