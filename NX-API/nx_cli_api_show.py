@@ -21,6 +21,9 @@ payload={
 }
 
 url='https://10.10.20.58/ins'
-response = requests.post(url,data=json.dumps(payload), headers=myheaders, auth=(switchuser,switchpassword), verify=False).json()
+response = requests.post(url,data=json.dumps(payload), 
+  headers=myheaders, 
+  auth=(switchuser,switchpassword), 
+  verify=False).json()
 
 print(json.dumps(response, indent=2))
