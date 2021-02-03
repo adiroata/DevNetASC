@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<aaaLogin
+    cookie=""
+    response="yes"
+    outCookie="1612190247/d3b7591a-19c8-424d-bd4e-68cd7af0b2e8"
+    outRefreshPeriod="600"
+    outPriv="aaa,admin,ext-lan-config,ext-lan-policy,ext-lan-qos,ext-lan-security,ext-san-config,ext-san-policy,ext-san-security,fault,operations,pod-config,pod-policy,pod-qos,pod-security,read-only"
+    outDomains="org-root"
+    outChannel="noencssl"
+    outEvtChannel="noencssl"
+    outSessionId=""
+    outVersion="3.2(2.5)"
+    outName=""
+  > </aaaLogin
+>
+
+<?xml version="1.0"?>
+<aaaLogin
+    cookie=""
+    response="yes"
+    outCookie="1612193682/cb3ca71c-6ac2-4347-9c3e-b60876384b79"
+    outRefreshPeriod="600"
+    outPriv="aaa,admin,ext-lan-config,ext-lan-policy,ext-lan-qos,ext-lan-security,ext-san-config,ext-san-policy,ext-san-security,fault,operations,pod-config,pod-policy,pod-qos,pod-security,read-only"
+    outDomains="org-root"
+    outChannel="noencssl"
+    outEvtChannel="noencssl"
+    outSessionId=""
+    outVersion="3.2(2.5)"
+    outName=""
+  > </aaaLogin
+>
+
+<?xml version="1.0"?>
+<aaaLogin
+    cookie=""
+    response="yes"
+    outCookie="1612193808/a2517098-53af-45c9-9679-3fb6569c20d3"
+    outRefreshPeriod="600"
+    outPriv="aaa,admin,ext-lan-config,ext-lan-policy,ext-lan-qos,ext-lan-security,ext-san-config,ext-san-policy,ext-san-security,fault,operations,pod-config,pod-policy,pod-qos,pod-security,read-only"
+    outDomains="org-root"
+    outChannel="noencssl"
+    outEvtChannel="noencssl"
+    outSessionId=""
+    outVersion="3.2(2.5)"
+    outName=""
+  > </aaaLogin
+>
+
