@@ -1,6 +1,6 @@
 FROM ubuntu:20.04
 
-LABEL Adrian Roata "adi.roata@gmail.com"
+LABEL Adrian Roata "adi_roata@mail.com"
 
 RUN apt-get update -y && apt-get install -y python3-pip python3-dev
 
