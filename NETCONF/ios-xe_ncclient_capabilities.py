@@ -3,6 +3,7 @@ from devnet_connection import devnet_connection
 # Write a function to establish the remote connection and get device capabilities
 def get_capabilities():
     for capability in devnet_connection.server_capabilities:
+        print("-"*50)
         print(capability)
 
 devnet_connection.close_session()
