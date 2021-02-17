@@ -36,15 +36,19 @@ ncs-netsim start
 ncs-netsim cli-i c1
 
 en
-
 show run
-
 exit
+
 # Create the base configs for NSO based on the generated router configs
 ncs-setup --netsim-dir ./netsim --dest .
 
+#Start NSO
 ncs
 
+# Access the GUI
+http://localhost:8080/
+
+# Enter CLI
 ncs_cli -u admin
 
 show configuration devices device
