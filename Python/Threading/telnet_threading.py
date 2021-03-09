@@ -1,6 +1,6 @@
 import threading
 import sys
-import os
+# import os
 import telnetlib
 import time
 import getpass
