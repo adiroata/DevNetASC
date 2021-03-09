@@ -27,6 +27,8 @@ def open_telnet(ip):
         # Exiting
         telnet.write(b'exit\n')
         output = telnet.read_until(b'exit', 5)
+        
+        # Write log
         data = open("output_"+ip+"_"+timestamp, "w")
         data.write(output.decode())
         data.close
