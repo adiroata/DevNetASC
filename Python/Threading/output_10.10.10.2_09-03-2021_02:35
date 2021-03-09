@@ -1,0 +1,10 @@
+
+R2#configure terminal 0
+                      ^
+% Invalid input detected at '^' marker.
+
+R2#no interface loopback 999
+      ^
+% Invalid input detected at '^' marker.
+
+R2#exit

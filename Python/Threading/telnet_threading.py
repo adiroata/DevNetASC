@@ -18,21 +18,22 @@ def open_telnet(ip):
         telnet.write(user + b'\n')
         telnet.read_until(b'Password: ', 3)
         telnet.write(password + b'\n')
-        telnet.write(b'terminal length 0\n')
-        telnet.write(b'show interface description\n')
-        # telnet.write(b'interface loopback 999\n')
-        # telnet.write(b'description test\n')
-        # telnet.write(b'end\n')
+        
+        # Write IOS commands here
+        telnet.write(b'configure terminal\n')
+        telnet.write(b'no interface loopback 999\n')
+        
+        # Exiting
         telnet.write(b'exit\n')
         output = telnet.read_until(b'exit', 5)
         data = open("output_"+ip+"_"+timestamp, "w")
         data.write(output.decode())
         data.close
 
-        print("Au fost executate comenzile pe hostul: " + str(ip))
+        print("Commands executed on host: " + str(ip))
     
     except:
-        print("Hostul " + str(ip) + " e down!")
+        print("The host " + str(ip) + " is down!")
  
 def create_threads():
     threads = []
@@ -47,4 +48,4 @@ def create_threads():
  
 if __name__ == "__main__":
         create_threads()
-        print ("Exiting the program")
+        print ("Ending the program")
