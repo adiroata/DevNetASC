@@ -1,12 +1,14 @@
 import threading
 import sys
-# import os
+import os
 import telnetlib
 import time
 import getpass
 
 user = input("Username: ").encode()
 password = getpass.getpass().encode()
+p1=os.environ.get("ENABLE_PW1")
+p2=os.environ.get("ENABLE_PW2")
 
 timestamp = time.strftime("%d" + "-" + "%m" + "-" + "%Y" + "_" + "%H" + ":" + "%M")
 
@@ -20,9 +22,18 @@ def open_telnet(ip):
         telnet.read_until(b'Password: ', 3)
         telnet.write(password + b'\n')
         
-        # Write IOS commands here
-        telnet.write(b'configure terminal\n')
-        telnet.write(b'no interface loopback 999\n')
+        # Raisecom specific
+        if telnet.read_until(b'*>', 3):
+            telnet.write(b'enable\n')
+            if telnet.read_until(b'Password: ', 3):
+                telnet.write(p1 + b'\n')
+            elif telnet.read_until(b'Password: ', 3):
+                telnet.write(p2 + b'\n')
+        
+
+        # Write commands here
+        # telnet.write(b'terminal length 0\n')
+        telnet.write(b'show interface port\n')
         
         # Exiting
         telnet.write(b'exit\n')
@@ -49,7 +60,7 @@ def divide_chunks(l, n):
 def create_threads():
     # Specify chunks size to be executed at once
     chunck_size=3
-    with open("hosts.txt", "r") as ipfile:
+    with open("loops", "r") as ipfile:
         chunks_list=[]
         for line in ipfile:
             chunks_list.append(line.rstrip("\n"))
