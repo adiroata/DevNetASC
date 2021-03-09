@@ -10,6 +10,7 @@ password = getpass.getpass().encode()
 
 timestamp = time.strftime("%d" + "-" + "%m" + "-" + "%Y" + "_" + "%H" + ":" + "%M")
 
+# Session manager
 def open_telnet(ip):
     print("Executing job on host: "+ip)
     try:
@@ -35,16 +36,36 @@ def open_telnet(ip):
     except:
         print("The host " + str(ip) + " is down!")
  
+# Yield successive n-sized 
+# chunks from l. 
+def divide_chunks(l, n):     
+    # looping till length l 
+    for i in range(0, len(l), n):  
+        yield l[i:i + n] 
+
+# Create and execute threads
 def create_threads():
-    threads = []
-    with open('hosts.txt','r') as ipfile:
+    # Specify chunks size to be executed at once
+    chunck_size=3
+    with open("hosts.txt", "r") as ipfile:
+        chunks_list=[]
         for line in ipfile:
-            ip = line.strip()
-            th = threading.Thread(target = open_telnet ,args = (ip,))
-            threads.append(th)
-            th.start()
-        for thr in threads:
-            thr.join()
+            chunks_list.append(line.rstrip("\n"))
+        
+
+        chunks = list(divide_chunks(chunks_list, chunck_size))
+
+        for chunk in chunks:
+            threads = []
+            for line in chunk:
+                ip = line.strip()
+                th = threading.Thread(target = open_telnet ,args = (ip,))
+                threads.append(th)
+                th.start()
+            for thr in threads:
+                thr.join()
+
+            print("Done processing chunk !")
  
 if __name__ == "__main__":
         create_threads()
